@@ -24,6 +24,25 @@ This project makes use of the transform and imutils modules from pyimagesearch (
 <img src="https://github.com/andrewdcampbell/doc_scanner/blob/master/sample_images/dollar_bill.JPG" width="350"> <img src="https://github.com/andrewdcampbell/doc_scanner/blob/master/output/dollar_bill.JPG" width="350">
 
 
+# Installation
+Installation instructions for Python 3.
+Install pip and pipenv if you don't have it already.
+
+Run
+```
+pipenv shell
+```
+Inside the shell, install the dependencies
+
+```
+pip install numpy
+pip install scipy
+pip install matplotlib
+pip install opencv-python
+pip install ocrd-fork-pylsd==0.0.3
+```
+
+
 ### Usage
 ```
 python scan.py (--images <IMG_DIR> | --image <IMG_PATH>) [-i]
