@@ -266,7 +266,7 @@ class DocScanner(object):
     def scan(self, image_path):
 
         RESCALED_HEIGHT = 500.0
-        OUTPUT_DIR = 'output'
+        OUTPUT_DIR = os.path.join('static', 'output')
 
         # load the image and compute the ratio of the old height
         # to the new height, clone it, and resize it
