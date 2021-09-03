@@ -1,7 +1,5 @@
 from flask import Flask, flash, request, url_for, redirect, jsonify, render_template
 import urllib.request
-from service import ToDoService
-from models import Schema
 from werkzeug.utils import secure_filename
 
 import json
@@ -52,44 +50,6 @@ def upload_image():
 def display_image(filename):
 	#print('display_image filename: ' + filename)
 	return redirect(url_for('static', filename='output/' + filename), code=301)
-
-# @app.route("/test", methods=['GET', 'POST'])
-# def get_picture():
-#     return render_template('hello.html')
-
-# @app.route("/picture_view")
-# def picture_view():
-#     filename = os.path.join(app.config['UPLOAD_FOLDER'], 'sample_1.jpg')
-#     return render_template('picture-view.html', upload_img = filename)
-
-
-# @app.route("/<name>")
-# def hello_name(name):
-#     return "Hello " + name
-
-
-# @app.route("/todo", methods=["GET"])
-# def list_todo():
-#     return jsonify(ToDoService().list())
-
-
-# @app.route("/todo", methods=["POST"])
-# def create_todo():
-#     return jsonify(ToDoService().create(request.get_json()))
-
-
-# @app.route("/todo/<item_id>", methods=["PUT"])
-# def update_item(item_id):
-#     return jsonify(ToDoService().update(item_id, request.get_json()))
-
-# @app.route("/todo/<item_id>", methods=["GET"])
-# def get_item(item_id):
-#     return jsonify(ToDoService().get_by_id(item_id))
-
-# @app.route("/todo/<item_id>", methods=["DELETE"])
-# def delete_item(item_id):
-#     return jsonify(ToDoService().delete(item_id))
-
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=5000)
